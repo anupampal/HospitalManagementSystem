@@ -193,18 +193,7 @@
                     </StackPanel>
                 </Expander>
 
-                <!-- Inventory -->
-                <Expander x:Name="InventoryExpander"
-                          Header="📦 Inventory Management"
-                          Style="{StaticResource ExpanderHeaderStyle}"
-                          IsExpanded="False">
-                    <StackPanel>
-                        <Button Content="🚚 Supplier Management" Style="{StaticResource SubMenuButton}" Tag="suppliermanagement" Click="NavigationButton_Click"/>
-                        <Button Content="📉 Stock Level Monitoring" Style="{StaticResource SubMenuButton}" Tag="stockmonitoring" Click="NavigationButton_Click"/>
-                        <Button Content="🛒 Purchase Orders" Style="{StaticResource SubMenuButton}" Tag="purchaseorders" Click="NavigationButton_Click"/>
-                        <Button Content="🛒 Purchase Approvals" Style="{StaticResource SubMenuButton}" Tag="purchaseapprovals" Click="NavigationButton_Click"/>
-                    </StackPanel>
-                </Expander>
+             
 
                 <!-- Doctor Dashboard -->
                 <Expander x:Name="DoctorExpander"
@@ -217,7 +206,31 @@
                         <Button Content="📂 Medical Records" Style="{StaticResource SubMenuButton}" Tag="medicalrecords" Click="NavigationButton_Click"/>
                     </StackPanel>
                 </Expander>
-
+                <!-- Doctor Dashboard -->
+                <Expander x:Name="NurseExpander"
+          
+          Header="🩺 Options"
+           Style="{StaticResource ExpanderHeaderStyle}"
+          IsExpanded="False">
+                    <StackPanel>
+                        <Button Content="👨‍⚕️ Patient Management" Style="{StaticResource SubMenuButton}" Tag="patientmanagement" Click="NavigationButton_Click"/>
+                        <Button Content="📅 Shift Management" Style="{StaticResource SubMenuButton}" Tag="shiftmanagement" Click="NavigationButton_Click"/>
+      
+                        <Button Content="📂 Communication Management" Style="{StaticResource SubMenuButton}" Tag="Communication" Click="NavigationButton_Click"/>
+                    </StackPanel>
+                </Expander>
+                <!-- Inventory -->
+                <Expander x:Name="InventoryExpander"
+             Header="📦 Inventory Management"
+             Style="{StaticResource ExpanderHeaderStyle}"
+             IsExpanded="False">
+                    <StackPanel>
+                        <Button Content="🚚 Supplier Management" Style="{StaticResource SubMenuButton}" Tag="suppliermanagement" Click="NavigationButton_Click"/>
+                        <Button Content="📉 Stock Level Monitoring" Style="{StaticResource SubMenuButton}" Tag="stockmonitoring" Click="NavigationButton_Click"/>
+                        <Button Content="🛒 Purchase Orders" Style="{StaticResource SubMenuButton}" Tag="purchaseorders" Click="NavigationButton_Click"/>
+                        <Button Content="🛒 Purchase Approvals" Style="{StaticResource SubMenuButton}" Tag="purchaseapprovals" Click="NavigationButton_Click"/>
+                    </StackPanel>
+                </Expander>
             </StackPanel>
         </Border>
 

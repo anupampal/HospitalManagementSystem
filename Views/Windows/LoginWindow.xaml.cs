@@ -96,13 +96,15 @@ namespace HospitalManagementSystem.Views.Windows
                         switch (user.Role)
                         {
                             case "Admin":
+                                targetWindow = new MainWindow();
+                                break;
                             case "Doctor":
                                 // Admin and Doctor roles use the full administrative MainWindow
                                 targetWindow = new MainWindow();
                                 break;
                             case "Nurse":
                                 // Nurse role opens the dedicated Nurse dashboard
-                                targetWindow = new NurseDashboardWindow();
+                                targetWindow = new MainWindow();
                                 break;
                             default:
                                 // Handle unknown roles gracefully

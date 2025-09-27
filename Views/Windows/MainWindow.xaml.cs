@@ -37,7 +37,9 @@ namespace HospitalManagementSystem.Views.Windows
                 // Example: Hide Inventory Management for a Doctor
                 if (userRole == "Doctor")
                 {
+                    NurseExpander.Visibility = Visibility.Collapsed;
                     InventoryExpander.Visibility = Visibility.Collapsed;
+                    ReportsExpander.Visibility = Visibility.Collapsed;
                 }
             }
 
@@ -50,12 +52,15 @@ namespace HospitalManagementSystem.Views.Windows
             else
             {
                 // If the user is Admin or Nurse, hide the Doctor-specific dashboard
-                DoctorExpander.Visibility = Visibility.Collapsed;
+                if (userRole == "Nurse")
+                    ReportsExpander.Visibility = Visibility.Collapsed;
+                    DoctorExpander.Visibility = Visibility.Collapsed;
+                if (userRole == "Admin")
+                    NurseExpander.Visibility = Visibility.Collapsed;
+                    DoctorExpander.Visibility = Visibility.Collapsed;
             }
 
-            // Note: A "NurseDashboardWindow" should be used for Nurses, 
-            // but this logic ensures the Nurse doesn't see Doctor/Admin features 
-            // if they somehow ended up in MainWindow.
+            
         }
 
         /// <summary>
@@ -85,8 +90,11 @@ namespace HospitalManagementSystem.Views.Windows
                     case "medicalrecords":
                         MainContentArea.Content = new MedicalRecordsView();
                         break;
-                    
 
+                    case "shiftmanagement":
+                        MainContentArea.Content = new ShiftManagementView();
+                        break;
+                       
 
                     // ------------------------------------
                     // --- Admin: User Management Views ---
@@ -147,9 +155,11 @@ namespace HospitalManagementSystem.Views.Windows
                         MainContentArea.Content = new StockMonitoringView();
                         break;
                     case "purchaseorders":
+                        MainContentArea.Content = new PurchaseOrdersView();
+                        break;
                     case "purchaseapprovals":
                         // Grouping purchase order/approval into one view for simplicity
-                        MainContentArea.Content = new PurchaseOrdersView();
+                        MainContentArea.Content = new PurchaseApprovalsView();
                         break;
 
                     default:
