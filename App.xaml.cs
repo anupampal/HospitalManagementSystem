@@ -20,8 +20,7 @@ namespace HospitalManagementSystem
             await UserCreator.CreateNewUserAsync("admin", "adminpassword","Admin",true);
 
             // After the database and user are created, you can open the login window.
-            var loginWindow = new Views.Windows.LoginWindow();
-            loginWindow.Show();
+            
         }
     }
 }

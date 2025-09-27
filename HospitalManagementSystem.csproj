@@ -18,6 +18,7 @@
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -30,7 +31,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -222,6 +222,12 @@
     <Compile Include="Views\UserControls\SystemUsageView.xaml.cs">
       <DependentUpon>SystemUsageView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Windows\NurseDashboardWindow .xaml.cs">
+      <DependentUpon>NurseDashboardWindow .xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Windows\DoctorDashboardWindow.xaml.cs">
+      <DependentUpon>DoctorDashboardWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Windows\LoginWindow.xaml.cs">
       <DependentUpon>LoginWindow.xaml</DependentUpon>
     </Compile>
@@ -229,6 +235,13 @@
       <DependentUpon>UserOnboardingWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="Views\UserControls\PurchaseOrderView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Windows\NurseDashboardWindow .xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Windows\DoctorDashboardWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Windows\MainWindow.xaml">

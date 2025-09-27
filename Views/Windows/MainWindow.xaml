@@ -47,7 +47,7 @@
                             </Path>
                         </Grid>
 
-                        
+
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
@@ -155,10 +155,10 @@
                         Click="NavigationButton_Click"/>
 
                 <!-- User Management -->
-                <Expander Header="👥 User Management"
-                         
-                          Foreground="White" Background="Transparent"
-                          Padding="20,10" FontWeight="SemiBold" FontSize="14">
+                <Expander x:Name="UserExpander"
+                          Header="👥 User Management"
+                          Style="{StaticResource ExpanderHeaderStyle}"
+                          IsExpanded="False">
                     <StackPanel>
                         <Button Content="📝 Register New User" Style="{StaticResource SubMenuButton}" Tag="registeruser" Click="NavigationButton_Click"/>
                         <Button Content="🔄 Modify Roles" Style="{StaticResource SubMenuButton}" Tag="modifyroles" Click="NavigationButton_Click"/>
@@ -168,10 +168,10 @@
                 </Expander>
 
                 <!-- System Configuration -->
-                <Expander Header="⚙️ System Configuration"
-                          
-                          Foreground="White" Background="Transparent"
-                          Padding="20,10" FontWeight="SemiBold" FontSize="14">
+                <Expander x:Name="SystemExpander"
+                          Header="⚙️ System Configuration"
+                          Style="{StaticResource ExpanderHeaderStyle}"
+                          IsExpanded="False">
                     <StackPanel>
                         <Button Content="🏥 Department Management" Style="{StaticResource SubMenuButton}" Tag="departmentmanagement" Click="NavigationButton_Click"/>
                         <Button Content="🛏 Room Management" Style="{StaticResource SubMenuButton}" Tag="roommanagement" Click="NavigationButton_Click"/>
@@ -181,10 +181,10 @@
                 </Expander>
 
                 <!-- Reports & Analytics -->
-                <Expander Header="📊 Reports &amp; Analytics"
-                         
-                          Foreground="White" Background="Transparent"
-                          Padding="20,10" FontWeight="SemiBold" FontSize="14">
+                <Expander x:Name="ReportsExpander"
+                          Header="📊 Reports &amp; Analytics"
+                          Style="{StaticResource ExpanderHeaderStyle}"
+                          IsExpanded="False">
                     <StackPanel>
                         <Button Content="🖥 System Usage" Style="{StaticResource SubMenuButton}" Tag="systemusage" Click="NavigationButton_Click"/>
                         <Button Content="💰 Financial Analytics" Style="{StaticResource SubMenuButton}" Tag="financialanalytics" Click="NavigationButton_Click"/>
@@ -194,10 +194,10 @@
                 </Expander>
 
                 <!-- Inventory -->
-                <Expander Header="📦 Inventory Management"
-                         
-                          Foreground="White" Background="Transparent"
-                          Padding="20,10" FontWeight="SemiBold" FontSize="14">
+                <Expander x:Name="InventoryExpander"
+                          Header="📦 Inventory Management"
+                          Style="{StaticResource ExpanderHeaderStyle}"
+                          IsExpanded="False">
                     <StackPanel>
                         <Button Content="🚚 Supplier Management" Style="{StaticResource SubMenuButton}" Tag="suppliermanagement" Click="NavigationButton_Click"/>
                         <Button Content="📉 Stock Level Monitoring" Style="{StaticResource SubMenuButton}" Tag="stockmonitoring" Click="NavigationButton_Click"/>
@@ -207,10 +207,10 @@
                 </Expander>
 
                 <!-- Doctor Dashboard -->
-                <Expander Header="🩺 Doctor Dashboard"
-                         
-                          Foreground="White" Background="Transparent"
-                          Padding="20,10" FontWeight="SemiBold" FontSize="14">
+                <Expander x:Name="DoctorExpander"
+                          Header="🩺 Doctor Dashboard"
+                          Style="{StaticResource ExpanderHeaderStyle}"
+                          IsExpanded="False">
                     <StackPanel>
                         <Button Content="👨‍⚕️ Patient Management" Style="{StaticResource SubMenuButton}" Tag="patientmanagement" Click="NavigationButton_Click"/>
                         <Button Content="📅 Appointment Management" Style="{StaticResource SubMenuButton}" Tag="appointmentmanagement" Click="NavigationButton_Click"/>

@@ -1,0 +1,18 @@
+<Window x:Class="HospitalManagementSystem.Views.Windows.NurseDashboardWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Nurse Dashboard - Hospital Management System" Height="550" Width="800"
+        WindowStartupLocation="CenterScreen">
+    <Grid Background="#E6E6FA">
+        <!-- Dashboard Content for Nurse -->
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock Text="Welcome, Nurse" FontSize="36" FontWeight="Bold" Foreground="#8A2BE2" Margin="0,0,0,20"/>
+            <TextBlock Text="This is your dedicated dashboard for patient triage, vital signs, and shift management." 
+                       FontSize="16" Foreground="#666" TextAlignment="Center" Margin="0,0,0,40"/>
+
+            <Button Content="Start Triage" Width="200" Height="45" Margin="0,10" Background="#00BCD4" Foreground="White" FontSize="16" BorderBrush="#0097A7" BorderThickness="1"/>
+            <Button Content="Manage Shift Tasks" Width="200" Height="45" Margin="0,10" Background="#FFEB3B" Foreground="#333" FontSize="16" BorderBrush="#FBC02D" BorderThickness="1"/>
+            <Button Content="Logout" Click="LogoutButton_Click" Width="200" Height="45" Margin="0,30" Background="#DC3545" Foreground="White" FontSize="16" BorderBrush="#C82333" BorderThickness="1"/>
+        </StackPanel>
+    </Grid>
+</Window>
