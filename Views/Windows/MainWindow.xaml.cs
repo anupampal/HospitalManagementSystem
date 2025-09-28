@@ -25,7 +25,7 @@ namespace HospitalManagementSystem.Views.Windows
             string userRole = AuthenticationService.CurrentUser?.Role;
 
             // Administrative features that only the Admin should see
-            if (userRole == "Doctor" || userRole == "Nurse")
+            if (userRole == "Doctor" || userRole == "Nurse" || userRole == "CLerk")
             {
                 // Hide User Management
                 UserExpander.Visibility = Visibility.Collapsed;
@@ -58,6 +58,14 @@ namespace HospitalManagementSystem.Views.Windows
                 if (userRole == "Admin")
                     NurseExpander.Visibility = Visibility.Collapsed;
                     DoctorExpander.Visibility = Visibility.Collapsed;
+                if (userRole == "Clerk")
+                    ClerkExpander.Visibility = Visibility.Visible;
+                    InventoryExpander.Visibility = Visibility.Collapsed;
+                    UserExpander.Visibility = Visibility.Collapsed;
+                    SystemExpander.Visibility = Visibility.Collapsed;
+                    NurseExpander.Visibility = Visibility.Collapsed;
+                    DoctorExpander.Visibility = Visibility.Collapsed;
+                    ReportsExpander.Visibility = Visibility.Collapsed;
             }
 
             
@@ -90,12 +98,13 @@ namespace HospitalManagementSystem.Views.Windows
                     case "medicalrecords":
                         MainContentArea.Content = new MedicalRecordsView();
                         break;
-
+                  
                     case "shiftmanagement":
                         MainContentArea.Content = new ShiftManagementView();
                         break;
-                       
-
+                    case "dashboard":
+                         MainContentArea.Content = new DashboardView();
+                        break;
                     // ------------------------------------
                     // --- Admin: User Management Views ---
                     // ------------------------------------
@@ -161,7 +170,9 @@ namespace HospitalManagementSystem.Views.Windows
                         // Grouping purchase order/approval into one view for simplicity
                         MainContentArea.Content = new PurchaseApprovalsView();
                         break;
-
+                    case "billing":
+                        MainContentArea.Content = new BillingManagementView();
+                        break;
                     default:
                         // Log or handle unhandled navigation tags
                         System.Diagnostics.Debug.WriteLine($"Unhandled navigation tag: {tag}");
